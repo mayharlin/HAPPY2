@@ -5,6 +5,10 @@
         "This file is @generated automatically"
     ],
     "hash": "e15459f2bbcaa63ea66ba8e994936195",
+<<<<<<< HEAD
+=======
+    "content-hash": "53b6d7787b72d98612ac6827903af8e6",
+>>>>>>> caafb552bfd464ab78461968fdc838ac0d07132a
     "packages": [
         {
             "name": "alrik11es/cowsayphp",
