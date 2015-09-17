@@ -4,10 +4,7 @@ $conn_string = "host=ec2-54-204-25-54.compute-1.amazonaws.com ";
 $conn_string .= "port=5432 dbname=d3j0nm9qghk5i6 user=etbyqbciasiion password= 2VoBZqhhBM1drFQtYCfltP434T";
 $dbconn = pg_connect($conn_string);
 
-print_r($dbconn);
-
-
-$query = 'SELECT username, birthdate, national, "password", phone FROM public.user LIMIT 5;'; 
+$query = 'SELECT username, birthdate, national, "password" FROM public.user LIMIT 5;';
 
 $rs = pg_query($dbconn, $query) or die("Cannot execute query: $query\n");
 
@@ -59,10 +56,10 @@ $rs = pg_query($dbconn, $query) or die("Cannot execute query: $query\n");
     <td><input id="Password" name="Password" type="text" style="width:200px" value="<?php echo $row[3]; ?>"></td>
   </tr>
 
-  <tr>
+  <!--<tr>
     <td>Phone</td>
-    <td><input id="Theme" name="Phone" type="text" style="width:200px" value="<?php echo $row[4]; ?>"></td>
-  </tr>
+    <td><input id="Theme" name="Phone" type="text" style="width:200px" value="<?php // echo $row[4]; ?>"></td>
+  </tr>-->
 
 </table>
 <?php endwhile; ?>
