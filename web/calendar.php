@@ -1,5 +1,5 @@
 <?php
-
+/*
 $conn_string = "host=ec2-54-204-25-54.compute-1.amazonaws.com ";
 $conn_string .= "port=5432 dbname=d3j0nm9qghk5i6 user=etbyqbciasiion password= 2VoBZqhhBM1drFQtYCfltP434T";
 $dbconn = pg_connect($conn_string);
@@ -8,6 +8,7 @@ $plans = pg_query($dbconn, $query) or die("Cannot execute query: $query\n");
 
 
 echo '<div class="plans" style="hidden">' . $plans . "</div>";
+*/
 ?>
 
 <!DOCTYPE html>
@@ -18,8 +19,8 @@ echo '<div class="plans" style="hidden">' . $plans . "</div>";
 <link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" title="no title" charset="utf-8">
 
 <meta charset='utf-8' />
-<link href='./css/fullcalendar.css' rel='stylesheet' />
-<link href='./css/fullcalendar.print.css' rel='stylesheet' media='print' />
+<link href='./fullcalendar.css' rel='stylesheet' />
+<link href='./fullcalendar.print.css' rel='stylesheet' media='print' />
 <script src='./lib/moment.min.js'></script>
 <script src='./lib/jquery.min.js'></script>
 <script src='./fullcalendar.min.js'></script>
@@ -108,6 +109,14 @@ echo '<div class="plans" style="hidden">' . $plans . "</div>";
 				
 				// red areas where no events can be dropped
 				{
+					start: '2015-08-31',
+					end: '2015-09-02',
+					overlap: false,
+					rendering: 'background',
+					color: '#ff9f89'
+				},
+				
+				{
 					start: '2015-09-29',
 					end: '2015-10-04',
 					overlap: false,
@@ -141,20 +150,39 @@ echo '<div class="plans" style="hidden">' . $plans . "</div>";
 
 <body>
 
+<?php
+$theme = "";
+$place = "";
+$startdate = "";
+$enddate = "";
+$budget = "";
+$max_participants = "";
+$placetovisit ="";
+$thingstobuy ="";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST")
+{
+   $theme = $_POST["theme"];
+   $place = $_POST["place"];
+   $startdate = $_POST["startdate"];
+   $enddate = $_POST["enddate"];
+   $budget = $_POST["budget"];
+   $max_participants = $_POST["max_participants"];
+   $placetovisit = $_POST["placetovisit"];
+   $thingstobuy = $_POST["thingstobuy"];
+}
+?>
+
 <table>
-
-
 
 <td>
 <div id='calendar'></div>
 </td>
-
 <td>
-
-<form action="#" method="post">
-
-<center>
-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</td>
+<td>
+<form method="post" action="<?php echo $_SERVER["PHP_SELF"];?>"> 
 
 <h2>Plan Now to Enjoy Your Japan!</h2>
 
@@ -167,41 +195,41 @@ echo '<div class="plans" style="hidden">' . $plans . "</div>";
 
   <tr>
     <td>Travel Theme</td>
-    <td><input id="Theme" name="Theme" type="text"></td>
+    <td><input name="theme" type="text"></td>
   </tr>
 
   <tr>
     <td>Destinations</td>
-    <td><input id="Destination" name="Destination" type="text"></td>
+    <td><input name="place" type="text"></td>
   </tr>
 
 <tr>
-<td><label for='date'>Departure </label></td>
-<td><select id='date' name='date' style='width:172px'>
+<td>Departure</td>
+<td><select name='startdate' style='width:172px'>
 <optgroup label='Undecided'>
 <optgroup label='Sep'>
-<option value='now'>2015/09/17</option>
-<option value='p1'>2015/09/18</option>
-<option value='p2'>2015/09/19</option>
-<option value='p3'>2015/09/20</option>
-<option value='p4'>2015/09/21</option>
+<option value='2015-09-17'>2015/09/17</option>
+<option value='2015-09-18'>2015/09/18</option>
+<option value='2015-09-19'>2015/09/19</option>
+<option value='2015-09-20'>2015/09/20</option>
+<option value='2015-09-21'>2015/09/21</option>
 </optgroup></td>
 </tr><br>
 
 <tr>
-<td><label for='date'>Return </label></td>
-<td><select id='date' name='date' style='width:172px'>
+<td>Return</td>
+<td><select name='enddate' style='width:172px'>
 <optgroup label='Undecided'>
 <optgroup label='Sep'>
-<option value='now'>2015/09/17</option>
-<option value='p1'>2015/09/18</option>
-<option value='p2'>2015/09/19</option>
-<option value='p3'>2015/09/20</option>
-<option value='p3'>2015/09/21</option>
+<option value='2015-09-18'>2015/09/18</option>
+<option value='2015-09-19'>2015/09/19</option>
+<option value='2015-09-20'>2015/09/20</option>
+<option value='2015-09-21'>2015/09/21</option>
+<option value='2015-09-17'>2015/09/22</option>
 </optgroup></td>
 </tr>
 
-
+<!--
 <tr>
 <td>Transportation</td>
 <td><select id='Transportation' name='Transportation' style='width:172px'>
@@ -213,50 +241,68 @@ echo '<div class="plans" style="hidden">' . $plans . "</div>";
 <option value='5'>By Walk</option>
 </optgroup></td>
   </tr>
+-->
 
 <tr>
     <td>Budget</td>
-    <td><input id="Budget" name="Budget" type="text"></td>
+    <td><input id="Budget" name="budget" type="text"></td>
 </tr>
 
 <tr>
     <td>Max Attendee</td>
-    <td><input id="attendee" name="attendee" type="text"></td>
+    <td><input id="attendee" name="max_participants" type="text"></td>
 </tr>
-
-
-<tr>
-<td><label for='Gender'>Gender </label></td>
-<td><select id='Gender' name='Gender' style='width:172px'>
-<optgroup>
-<option value='1'>Male Only</option>
-<option value='2'>Female Only</option>
-<option value='3'>Both OK</option>
-</optgroup></td>
-</tr>
-
-
- <tr>
-    <td>Description</td>
-    <td><input id="description" name="description" type="textarea"></td>
-  </tr>
+    
 
 </table>
+<br><br>
+Place to Visit:
+	<br>
+    <textarea name="placetovisit" rows="5" type="textarea"></textarea>
+
+	
+	<br>
+	<br>
+  Things to Buy:
+  <br>
+    <textarea name="thingstobuy" rows="5" type="textarea" ></textarea>
 
 
 </div>
 </div> 
 
-</form>
+
 
 <p>
-<button type='submit'>Finish My Plan !</button>
+<input type="submit" name="submit" value="Finish My Plan !"> 
 </p>
+</form>
 
+<br><br><br>
 
-
-</center>
-
+<?php
+echo "<h2>Travel Plan:</h2>";
+echo 'Travel Theme: '.$theme;
+echo "<br><br>";
+echo 'Destinations: '.$place;
+echo "<br><br>";
+echo 'Departure: '.$startdate;
+echo "<br><br>";
+echo 'Return: '.$enddate;
+echo "<br><br>";
+echo 'Budget: '.$budget;
+echo "<br><br>";
+echo 'Max Attendants: '.$max_participants;
+echo "<br><br>";
+echo 'Places to Visit: ';
+echo "<br><br>";
+echo $placetovisit;
+echo "<br><br>";
+echo 'Things to Buy:';
+echo "<br><br>";
+echo $thingstobuy;
+echo "<br><br>";
+?>
 
 </td>
 
