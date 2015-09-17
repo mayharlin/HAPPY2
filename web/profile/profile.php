@@ -20,6 +20,7 @@ $rs = pg_query($dbconn, $query) or die("Cannot execute query: $query\n");
 <title>Profile</title>
 <link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen" title="no title" charset="utf-8">
 <link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" title="no title" charset="utf-8">
+<link rel="stylesheet" href="main2.css">
 </head>
 
 <body>
