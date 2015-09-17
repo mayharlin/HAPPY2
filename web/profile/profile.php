@@ -74,56 +74,25 @@ $rs = pg_query($dbconn, $query) or die("Cannot execute query: $query\n");
 </form>
 
 
-
-
-<div class="information">
-<div class="container">
-<div class = "row">
-
-<div class = "col-md-6">								
- <div class="thumbnail">
-	<h1>Current Plans</h1>
+<h1 style= "padding-right: 250px;">Past Plans</h1>
   <table>
-    <tr>
+  <tr>
     <td>Plan 1</td>
-    <td>><a href="http://www.rakuten.co.jp">xxx</a></td>
+    <td><a href="http://www.rakuten.co.jp">xxx</a></td>
   </tr>
 	
   <tr>
     <td>Plan 2</td>
-    <td>><a href="http://www.rakuten.co.jp">yyy</a></td>
+    <td><a href="http://www.rakuten.co.jp">yyy</a></td>
   </tr>
 	
   <tr>
-    <td>PLan 3</td>
-    <td>><a href="http://www.rakuten.co.jp">zzz</a></td>
+    <td>Plan 3</td>
+    <td><a href="http://www.rakuten.co.jp">zzz</a></td>
   </tr>
+
   </table>
- </div>
-</div>
-                
-<div class = "col-md-6">
- <div class="thumbnail">
-	<h1>Past Plans</h1>
-  <table>
-  <tr>
-    <td>Plan 1</td>
-    <td>><a href="http://www.rakuten.co.jp">xxx</a></td>
-  </tr>
-	
-  <tr>
-    <td>Plan 2</td>
-    <td>><a href="http://www.rakuten.co.jp">yyy</a></td>
-  </tr>
-	
-  <tr>
-    <td>PLan 3</td>
-    <td>><a href="http://www.rakuten.co.jp">zzz</a></td>
-  </tr>
-
-  </table>                      
- </div>
-</div>
+  
  </div>
 </div>
 </div>
@@ -131,21 +100,44 @@ $rs = pg_query($dbconn, $query) or die("Cannot execute query: $query\n");
 
 <div class="information">
 <div class="container">
-<h1>Box of Benefits</h1>
+<h1 style= "padding-right: 200px;">Box of Benefits</h1>
   <table>
     <tr>
     <td>Benefit 1</td>
-    <td>><a href="http://www.rakuten.co.jp">xxx</a></td>
+    <td><a href="http://www.rakuten.co.jp">xxx</a></td>
   </tr>
 	
   <tr>
     <td>Benefit 2</td>
-    <td>><a href="http://www.rakuten.co.jp">yyy</a></td>
+    <td><a href="http://www.rakuten.co.jp">yyy</a></td>
   </tr>
 	
   <tr>
     <td>Benefit 3</td>
-    <td>><a href="http://www.rakuten.co.jp">zzz</a></td>
+    <td><a href="http://www.rakuten.co.jp">zzz</a></td>
+  </tr>
+  </table>
+</div>
+</div>
+
+
+<div class="information">
+<div class="container">
+<h1 style= "padding-right: 200px;">Box of Benefits</h1>
+  <table>
+    <tr>
+    <td>Benefit 1</td>
+    <td><a href="http://www.rakuten.co.jp">xxx</a></td>
+  </tr>
+	
+  <tr>
+    <td>Benefit 2</td>
+    <td><a href="http://www.rakuten.co.jp">yyy</a></td>
+  </tr>
+	
+  <tr>
+    <td>Benefit 3</td>
+    <td><a href="http://www.rakuten.co.jp">zzz</a></td>
   </tr>
   </table>
 </div>
