@@ -138,7 +138,7 @@ echo $row[0];
 			{
 				$query = "INSERT INTO public.user(userid, username, birthdate, password, national)" ;
 				$query .= "VALUES(" . $input_userid . ", '" . $input_user . "', CURRENT_DATE, '" . $input_password . "', '" . $input_national . "')";
-				print_r($query);
+				//print_r($query);
 				pg_query($dbconn, $query);
 			}
 			
