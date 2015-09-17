@@ -1,11 +1,13 @@
 <?php 
+echo 'new2';
 $conn_string = "host=ec2-54-204-25-54.compute-1.amazonaws.com ";
 $conn_string .= "port=5432 dbname=d3j0nm9qghk5i6 user=etbyqbciasiion password= 2VoBZqhhBM1drFQtYCfltP434T";
 $dbconn = pg_connect($conn_string);
-$query = 'SELECT max(user) FROM public.user';
+$query = 'SELECT max(userid) FROM public.user';
 $rs = pg_query($dbconn, $query) or die("Cannot execute query: $query\n");
 
 while ($row = pg_fetch_row($rs)) $input_userid = $row[0];
+echo $row[0];
 
 ?>
 
@@ -50,7 +52,7 @@ while ($row = pg_fetch_row($rs)) $input_userid = $row[0];
                     <a class="hiddenanchor" id="tologin"></a>
                     <div id="wrapper">
                         <div id="login" class="animate form">
-                            <form  action="register.php" autocomplete="on"> 
+                            <form  action="register.php" autocomplete="on" method="post"> 
                                 <h1>Sign up</h1> 
                                 <p> 
                                     <label for="usermail" class="umail" data-icon="u" > Email address </label>
@@ -69,7 +71,7 @@ while ($row = pg_fetch_row($rs)) $input_userid = $row[0];
 								
 								<p> 
                                     <label for="password" class="youpasswd" data-icon="p"> Confirm password </label>
-                                    <input id="password" name="password" required="required" type="password" placeholder="Please confirm your password" /> 
+                                    <input id="password" name="passwordconf" required="required" type="password" placeholder="Please confirm your password" /> 
                                 </p>
 								
 								<p> 
@@ -132,11 +134,11 @@ while ($row = pg_fetch_row($rs)) $input_userid = $row[0];
 			$input_password = $_POST['password'];
 			$input_national = $_POST['nationality'];
 			
-			if(isset($input_user) && isset($input_password) && isset($input_national));
+			if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['nationality']))
 			{
 				$query = "INSERT INTO public.user(userid, username, birthdate, password, national)" ;
 				$query .= "VALUES(" . $input_userid . ", '" . $input_user . "', CURRENT_DATE, '" . $input_password . "', '" . $input_national . "')";
-				print_r($query);
+				//print_r($query);
 				pg_query($dbconn, $query);
 			}
 			
