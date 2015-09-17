@@ -1,0 +1,41 @@
+body {
+	background-image: url(http://210.51.56.58/fileupload/txtimage/201111181613276875.jpg);
+  background-repeat: repeat-y;
+	background-size:cover;
+	
+};
+
+body {font-size:100%;}
+
+h1 {font-size:3.75em;}
+
+.information h1{
+    font-size: 30px;
+    color: #fff;
+}
+
+.information table{
+		font-size: 20px;
+    color: #fff;
+		
+}
+
+.information p{
+  font-size: 25px;
+  color: #fff;
+}
+
+#Name
+{
+	width:200px;
+}
+
+button{
+		top:700px;
+		margin: 50px;
+		height:30px;
+		width:150px;
+		color: blue;
+		
+}
+
