@@ -46,7 +46,7 @@
 
  <tr>
     <td>Comment</td>
-    <td><input id="Comment" name="Message" type="text" style="width:300px;height:100px"></td>
+	<td><textarea id="Comment" rows="4" cols="50" name="Message" style="width:300px;height:100px"></textarea></td>
   </tr>
 
 	<tr>
@@ -88,7 +88,7 @@
 </div>
 </div> 
 
-</form>
+
 
 <p>
 <button type='submit'>send</button>
@@ -97,6 +97,7 @@
 <p>
 <button type='submit'>Back to Homepage</button>
 </p>
+</form>
 
 <div id="fb-root"></div>
 
