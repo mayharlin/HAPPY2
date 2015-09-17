@@ -7,7 +7,7 @@ $dbconn = pg_connect($conn_string);
 print_r($dbconn);
 
 
-$query = "SELECT * FROM user LIMIT 5"; 
+$query = "SELECT * FROM public.user LIMIT 5"; 
 
 $rs = pg_query($dbconn, $query) or die("Cannot execute query: $query\n");
 
