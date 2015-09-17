@@ -135,6 +135,8 @@ echo $row[0];
 			
 			//if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['nationality']));
 			print_r($_POST);
+			print_r($input_user . $input_password . $input_national);
+
 			if(!empty($input_user) && !empty($input_password) && !empty($input_national));
 			{
 				$query = "INSERT INTO public.user(userid, username, birthdate, password, national)" ;
