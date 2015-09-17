@@ -7,7 +7,7 @@ $dbconn = pg_connect($conn_string);
 print_r($dbconn);
 
 
-$query = 'SELECT username, birthdate, national, "password", phone FROM public.user LIMIT 1;'; 
+$query = 'SELECT username, birthdate, national, "password", phone FROM public.user LIMIT 5;'; 
 
 $rs = pg_query($dbconn, $query) or die("Cannot execute query: $query\n");
 
@@ -26,7 +26,7 @@ $rs = pg_query($dbconn, $query) or die("Cannot execute query: $query\n");
 <center>
 <form action="#" method="post">
 
-<h1>Porfile</h1>
+<h1>Profile</h1>
 
 <div class="information">
 <div class="container">
