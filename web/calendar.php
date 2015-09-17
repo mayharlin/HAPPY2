@@ -1,16 +1,3 @@
-<?php
-/*
-$conn_string = "host=ec2-54-204-25-54.compute-1.amazonaws.com ";
-$conn_string .= "port=5432 dbname=d3j0nm9qghk5i6 user=etbyqbciasiion password= 2VoBZqhhBM1drFQtYCfltP434T";
-$dbconn = pg_connect($conn_string);
-$query = 'SELECT planname, place, startdate, enddate, budget, max_attendance, placetovisit, thingstobuy, FROM public.user where userid=2;';
-$plans = pg_query($dbconn, $query) or die("Cannot execute query: $query\n");
-
-
-echo '<div class="plans" style="hidden">' . $plans . "</div>";
-*/
-?>
-
 <!DOCTYPE html>
 <html>
 
@@ -19,8 +6,8 @@ echo '<div class="plans" style="hidden">' . $plans . "</div>";
 <link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" title="no title" charset="utf-8">
 
 <meta charset='utf-8' />
-<link href='./fullcalendar.css' rel='stylesheet' />
-<link href='./fullcalendar.print.css' rel='stylesheet' media='print' />
+<link href='./css/fullcalendar.css' rel='stylesheet' />
+<link href='./css/fullcalendar.print.css' rel='stylesheet' media='print' />
 <script src='./lib/moment.min.js'></script>
 <script src='./lib/jquery.min.js'></script>
 <script src='./fullcalendar.min.js'></script>
