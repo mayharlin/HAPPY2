@@ -8,7 +8,7 @@
 
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<link rel="stylesheet" href="css.css" media="screen" />
+<link rel="stylesheet" href="invite.css" media="screen" />
 <title><?php echo 'LP Invite Page' ?></title>
 <script src="jquery.min.js"></script>
 <script src="jquery-simple-pagination-plugin.js"></script>
