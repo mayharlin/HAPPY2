@@ -36,10 +36,12 @@ $smtp = Mail::factory('smtp', array(
         'port' => '465',
         'auth' => true,
         'username' => 'bangmay@gmail.com',
-        'password' => '@ntih4ckersX08118653444'
+        'password' => ''
     ));
 
 $mail = $smtp->send($to, $headers, $body . ' ' . $body_more);
+
+print_r($mail);
 
 if (PEAR::isError($mail)) {
     echo('<p>' . $mail->getMessage() . '</p>');
