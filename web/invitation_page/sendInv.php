@@ -1,6 +1,6 @@
 <?php
 echo 'xxx';
-require_once "Mail.php";
+include "Mail.php";
 
 $plan = $_POST['Plan'];
 if($plan == 'PLAN001') $dest = "Kyoto";
