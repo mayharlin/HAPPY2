@@ -74,7 +74,31 @@ $rs = pg_query($dbconn, $query) or die("Cannot execute query: $query\n");
 </form>
 
 
-<h1 style= "padding-right: 250px;">Past Plans</h1>
+<div class="information">
+<div class="container">
+<div class = "row">
+
+	<h1 style= "padding-right: 200px;">Current Plans</h1>
+  <table>
+    <tr>
+    <td>Plan 1</td>
+    <td><a href="http://www.rakuten.co.jp">xxx</a></td>
+  </tr>
+	
+  <tr>
+    <td>Plan 2</td>
+    <td><a href="http://www.rakuten.co.jp">yyy</a></td>
+  </tr>
+	
+  <tr>
+    <td>Plan 3</td>
+    <td><a href="http://www.rakuten.co.jp">zzz</a></td>
+  </tr>
+  </table>
+ 
+                
+
+	<h1 style= "padding-right: 250px;">Past Plans</h1>
   <table>
   <tr>
     <td>Plan 1</td>
@@ -94,29 +118,6 @@ $rs = pg_query($dbconn, $query) or die("Cannot execute query: $query\n");
   </table>
   
  </div>
-</div>
-</div>
-
-
-<div class="information">
-<div class="container">
-<h1 style= "padding-right: 200px;">Box of Benefits</h1>
-  <table>
-    <tr>
-    <td>Benefit 1</td>
-    <td><a href="http://www.rakuten.co.jp">xxx</a></td>
-  </tr>
-	
-  <tr>
-    <td>Benefit 2</td>
-    <td><a href="http://www.rakuten.co.jp">yyy</a></td>
-  </tr>
-	
-  <tr>
-    <td>Benefit 3</td>
-    <td><a href="http://www.rakuten.co.jp">zzz</a></td>
-  </tr>
-  </table>
 </div>
 </div>
 
