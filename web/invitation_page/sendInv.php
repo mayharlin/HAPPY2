@@ -1,4 +1,5 @@
 <?php
+echo 'xxx';
 require_once "Mail.php";
 
 $plan = $_POST['Plan'];
