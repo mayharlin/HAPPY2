@@ -1,4 +1,5 @@
 <?php 
+$echo 'new';
 $conn_string = "host=ec2-54-204-25-54.compute-1.amazonaws.com ";
 $conn_string .= "port=5432 dbname=d3j0nm9qghk5i6 user=etbyqbciasiion password= 2VoBZqhhBM1drFQtYCfltP434T";
 $dbconn = pg_connect($conn_string);
@@ -51,7 +52,7 @@ echo $row[0];
                     <a class="hiddenanchor" id="tologin"></a>
                     <div id="wrapper">
                         <div id="login" class="animate form">
-                            <form  action="register.php" autocomplete="on"> 
+                            <form  action="register.php" autocomplete="on" method="post"> 
                                 <h1>Sign up</h1> 
                                 <p> 
                                     <label for="usermail" class="umail" data-icon="u" > Email address </label>
