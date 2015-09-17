@@ -22,6 +22,10 @@ $app->get('/', function() use($app) {
   return $app['twig']->render('index.twig');
 });
 
+$app->get('/', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return str_repeat('Hello', getenv('TIMES'));
+});
 
 $app->get('/cowsay', function() use($app) {
   $app['monolog']->addDebug('cowsay');
