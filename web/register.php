@@ -6,6 +6,7 @@ $query = 'SELECT max(user) FROM public.user';
 $rs = pg_query($dbconn, $query) or die("Cannot execute query: $query\n");
 
 while ($row = pg_fetch_row($rs)) $input_userid = $row[0];
+echo $row[0];
 
 ?>
 
@@ -69,7 +70,7 @@ while ($row = pg_fetch_row($rs)) $input_userid = $row[0];
 								
 								<p> 
                                     <label for="password" class="youpasswd" data-icon="p"> Confirm password </label>
-                                    <input id="password" name="password" required="required" type="password" placeholder="Please confirm your password" /> 
+                                    <input id="password" name="passwordconf" required="required" type="password" placeholder="Please confirm your password" /> 
                                 </p>
 								
 								<p> 
@@ -132,7 +133,7 @@ while ($row = pg_fetch_row($rs)) $input_userid = $row[0];
 			$input_password = $_POST['password'];
 			$input_national = $_POST['nationality'];
 			
-			if(isset($input_user) && isset($input_password) && isset($input_national));
+			if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['nationality']));
 			{
 				$query = "INSERT INTO public.user(userid, username, birthdate, password, national)" ;
 				$query .= "VALUES(" . $input_userid . ", '" . $input_user . "', CURRENT_DATE, '" . $input_password . "', '" . $input_national . "')";
