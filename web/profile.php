@@ -11,11 +11,6 @@ $query = 'SELECT username, "password", birthdate, address, phone FROM public.use
 
 $rs = pg_query($dbconn, $query) or die("Cannot execute query: $query\n");
 
-while ($row = pg_fetch_row($rs)) {
-  echo $row[0] . $row[1] . $row[2];
-}
-
-
 ?>
 
 
@@ -68,13 +63,12 @@ while ($row = pg_fetch_row($rs)) {
 			<td><br/><input type="text" name="Phone" size="25" value="<?php echo $row[4]; ?>" /><br/><br/></td>
 		</tr>
 		
-		<?php endwhile; ?>
-		
 		<tr>
 			<td></td>
 			<td><br/><input type="submit" value="Login" /><br/><br/></td>
 		</tr>
 	</table><br/>
+	<?php endwhile; ?>
 </form>
 
 <div id="fb-root"></div>
