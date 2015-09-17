@@ -1,54 +1,147 @@
+<?php 
+$conn_string = "host=ec2-54-204-25-54.compute-1.amazonaws.com ";
+$conn_string .= "port=5432 dbname=d3j0nm9qghk5i6 user=etbyqbciasiion password= 2VoBZqhhBM1drFQtYCfltP434T";
+$dbconn = pg_connect($conn_string);
+$query = 'SELECT max(user) FROM public.user';
+$rs = pg_query($dbconn, $query) or die("Cannot execute query: $query\n");
 
-<html>
-<head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<link rel="stylesheet" href="css.css" media="screen" />
-<title><?php echo 'LP Invite Page' ?></title>
-<script src="jquery.min.js"></script>
-<script src="jquery-simple-pagination-plugin.js"></script>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+while ($row = pg_fetch_row($rs)) $input_userid = $row[0];
+
+?>
+
+<!DOCTYPE html>
+
+ <html lang="en" class="no-js"> 
+    <head>
+        <meta charset="UTF-8" />
+       
+        <title>Sign Up Form</title>
+
+        <link rel="shortcut icon" href="../favicon.ico"> 
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/animate-custom.css" />
+    </head>
+    <body>
+        <div class="container">
+            <!-- Codrops top bar -->
+            <div class="codrops-top">
+                <a href="">
+                    <strong>&laquo; Back to homepage </strong>
+                </a>
+                <span class="right">
+                   <a href=" http://www.rakuten.co.jp/">
+                        <strong>Go to Rakuten</strong>
+                    </a>
+                </span>
+                <div class="clr"></div>
+            </div><!--/ Codrops top bar -->
+            <header>
+                <h1>Start Now to Enjoy Your <span>Japan</span></h1>
+				<nav class="codrops-demos">
+					<span>Experience a new Japan you have never seen before by clicking <strong>"Join Us"</strong></span>
+
+				</nav>
+            </header>
+            <section>				
+                <div id="container_demo" >
+                    <!-- hidden anchor to stop jump http://www.css3create.com/Astuce-Empecher-le-scroll-avec-l-utilisation-de-target#wrap4  -->
+                    <a class="hiddenanchor" id="toregister"></a>
+                    <a class="hiddenanchor" id="tologin"></a>
+                    <div id="wrapper">
+                        <div id="login" class="animate form">
+                            <form  action="register.php" autocomplete="on"> 
+                                <h1>Sign up</h1> 
+                                <p> 
+                                    <label for="usermail" class="umail" data-icon="u" > Email address </label>
+                                    <input id="usermail" name="usermail" required="required" type="text" placeholder="mymail@mail.com"/>
+                                </p>
+								
+								<p> 
+                                    <label for="username" class="uname" data-icon="u" > Your username </label>
+                                    <input id="username" name="username" required="required" type="text" placeholder="myusername"/>
+                                </p>
+								
+                                <p> 
+                                    <label for="password" class="youpasswd" data-icon="p"> Your password </label>
+                                    <input id="password" name="password" required="required" type="password" placeholder="Enter a password longer than 8 characters" /> 
+                                </p>
+								
+								<p> 
+                                    <label for="password" class="youpasswd" data-icon="p"> Confirm password </label>
+                                    <input id="password" name="password" required="required" type="password" placeholder="Please confirm your password" /> 
+                                </p>
+								
+								<p> 
+                                    <label for="Age" class="Age" data-icon="u"> Your age </label>
+                                    <input id="Age" name="Age" required="required" type="Age" placeholder="" /> 
+                                </p>
 
 
-</head>
-<body>
-<h1><?php echo 'LP Invitation Page' ?></h1>
-<form action="home.php" method="post">
-	<table>
-		<tr>
-			<td>Username</td>
-			<td><br/><input type="text" name="User" size="25" value="" /><br/><br/></td>
-		</tr>
-		<tr>
-			<td>Password</td>
-			<td><br/><input type="password" name="UserPass" size="25" value="" /><br/><br/></td>
-		</tr>
-		<tr>
-		<tr>
-			<td>FullName</td>
-			<td><br/><input type="text" name="FullName" size="25" value="" /><br/><br/></td>
-		</tr>
-		<tr>
-			<td>Address</td>
-			<td><br/><input type="text" name="UserPass" size="25" value="" /><br/><br/></td>
-		</tr>
-		<tr>
-			<td>Phone</td>
-			<td><br/><input type="text" name="UserPass" size="25" value="" /><br/><br/></td>
-		</tr>
-		<tr>
-			<td></td>
-			<td><br/><input type="submit" value="Login" /><br/><br/></td>
-		</tr>
-	</table><br/>
-</form>
+<p>
+<label for='Gender'>Gender</label>
+<select id='Gender' name='gender'>
+<optgroup>
+<option value='Male'>Male</option>
+<option value='Female'>Female</option>
+</optgroup>
+</select>
 
-<div id="fb-root"></div>
 
-</body>
+<label for='Nationality'>Nationality</label>
+<select id='Nationality' name='nationality'>
+<optgroup label='Asia'>
+<option value='China'>China</option>
+<option value='Indoneisa'>Indonesia</option>
+<option value='Korea'>Korea</option>
+<option value='India'>India</option>
+</optgroup>
+
+<optgroup label='Europe'>
+<option value='France'>France</option>
+<option value='Germany'>Germany</option>
+</optgroup>
+
+<optgroup label='North America'>
+<option value='USA'>USA</option>
+<option value='Canada'>Canada</option>
+</optgroup>
+</select>
+</p>
+
+                      <p class="to_register button"> 
+                                    <input type="submit" value="Join us" /> 
+								</p>
+                                <p class="change_link">  
+									Already a member ?
+									<a href="#tologin" class="to_register"> Go and log in </a>
+								</p>
+                            </form>
+                        </div>
+						
+                    </div>
+                </div>  
+            </section>
+        </div>
+		
+		<?php
+			
+		
+			$input_userid += 1;
+			$input_user = $_POST['username'];
+			$input_password = $_POST['password'];
+			$input_national = $_POST['nationality'];
+			
+			if(isset($input_user) && isset($input_password) && isset($input_national));
+			{
+				$query = "INSERT INTO public.user(userid, username, birthdate, password, national)" ;
+				$query .= "VALUES(" . $input_userid . ", '" . $input_user . "', CURRENT_DATE, '" . $input_password . "', '" . $input_national . "')";
+				print_r($query);
+				pg_query($dbconn, $query);
+			}
+			
+		?>
+		
+    </body>
+
+</html>
