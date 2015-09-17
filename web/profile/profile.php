@@ -35,32 +35,32 @@ $rs = pg_query($dbconn, $query) or die("Cannot execute query: $query\n");
 <table>
   <tr>
     <td>Name</td>
-    <td><input id="Name" name="Name" type="text" style="width:200px" value="<?php $row[0]; ?>"></td>
+    <td><input id="Name" name="Name" type="text" style="width:200px" value="<?php echo $row[0]; ?>"></td>
   </tr>
 	
   <tr>
     <td>Birthday</td>
-    <td><input id="Birthday" name="Birthday" type="text" style="width:200px" value="<?php $row[1]; ?>"></td>
+    <td><input id="Birthday" name="Birthday" type="text" style="width:200px" value="<?php echo $row[1]; ?>"></td>
   </tr>
 	
   <tr>
     <td>Nationality</td>
-    <td><input id="nationality" name="Nationality" type="text" style="width:200px" value="<?php $row[2]; ?>"></td>
+    <td><input id="nationality" name="Nationality" type="text" style="width:200px" value="<?php echo $row[2]; ?>"></td>
   </tr>
 		
   <tr>
     <td>Email Address</td>
-    <td><input id="Email" name="Email" type="text" style="width:200px" value="<?php $row[0]; ?>@rakuten.co.jp"></td>
+    <td><input id="Email" name="Email" type="text" style="width:200px" value="<?php echo $row[0]; ?>@rakuten.co.jp"></td>
   </tr>
 
 	<tr>
     <td>Password</td>
-    <td><input id="Password" name="Password" type="text" style="width:200px" value="<?php $row[3]; ?>"></td>
+    <td><input id="Password" name="Password" type="text" style="width:200px" value="<?php echo $row[3]; ?>"></td>
   </tr>
 
   <tr>
     <td>Phone</td>
-    <td><input id="Theme" name="Phone" type="text" style="width:200px" value="<?php $row[4]; ?>"></td>
+    <td><input id="Theme" name="Phone" type="text" style="width:200px" value="<?php echo $row[4]; ?>"></td>
   </tr>
 
 </table>
