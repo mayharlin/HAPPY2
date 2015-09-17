@@ -7,7 +7,7 @@ $dbconn = pg_connect($conn_string);
 print_r($dbconn);
 
 
-$query = 'SELECT username, birthdate, national, email, "password", phone FROM public.user LIMIT 1;'; 
+$query = 'SELECT username, birthdate, national, "password", phone FROM public.user LIMIT 1;'; 
 
 $rs = pg_query($dbconn, $query) or die("Cannot execute query: $query\n");
 
@@ -55,12 +55,12 @@ $rs = pg_query($dbconn, $query) or die("Cannot execute query: $query\n");
 
 	<tr>
     <td>Password</td>
-    <td><input id="Password" name="Password" type="text" style="width:200px" value="<?php $row[4]; ?>"></td>
+    <td><input id="Password" name="Password" type="text" style="width:200px" value="<?php $row[3]; ?>"></td>
   </tr>
 
   <tr>
     <td>Phone</td>
-    <td><input id="Theme" name="Phone" type="text" style="width:200px" value="<?php $row[5]; ?>"></td>
+    <td><input id="Theme" name="Phone" type="text" style="width:200px" value="<?php $row[4]; ?>"></td>
   </tr>
 
 </table>
