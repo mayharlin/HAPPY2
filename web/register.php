@@ -11,7 +11,7 @@ echo $row[0];
 ?>
 
 <!DOCTYPE html>
-<!-- xxxxxxxxx -->
+<!-- yyyyy -->
  <html lang="en" class="no-js"> 
     <head>
         <meta charset="UTF-8" />
