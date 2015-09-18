@@ -49,7 +49,7 @@ $rs = pg_query($dbconn, $query) or die("Cannot execute query: $query\n");
 
 	<tr>
     <td>Password</td>
-    <td><input id="Password" name="Password" type="text" style="width:200px" value="<?php echo $row[3]; ?>"></td>
+    <td><input id="Password" name="Password" type="password" style="width:200px" value="<?php echo $row[3]; ?>"></td>
   </tr>
 
   <!--<tr>

@@ -13,17 +13,17 @@
     <div class="nav">
         <div class="container">
             <ul class= "pull-right">
-                  <li><a href="http://www.rakuten.co.jp">Sign Up</a></li>
-                  <li><a href="#">Log In</a></li>
-                  <li><a href="#">FAQ</a></li> 
+                  <li><a href="register.php">Sign Up</a></li>
+                  <li><a href="login.php">Log In</a></li>
+                  <li><a href="faq.php">FAQ</a></li> 
             </ul>
         </div>
 
 	      <!-- Searching -->
 		    <div class = "searching">
 					  <div class = "container">
-			          <form action="form_action.asp" method="get">
-                      Searching: <input type="text" keyword="fname" />
+			          <form action="travel.php" method="post">
+                      Searching: <input type="text" name="genre" keyword="fname" />
                       <input type="submit" value="Submit" />
                 </form>
 						</div>
