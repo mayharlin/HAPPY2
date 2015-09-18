@@ -4,7 +4,6 @@
 <head>
 <title>Calendar</title>
 <link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" title="no title" charset="utf-8">
-<link rel="stylesheet" href="invite.css" media="screen" />
 
 <meta charset='utf-8' />
 <link href='./css/fullcalendar.css' rel='stylesheet' />
@@ -197,33 +196,6 @@ echo "<br><br>";
 <div class="container">
 
 <form action="sendInv.php" method="post">
-<table>
-  <tr>
-    <td>Email Address</td>
-    <td><input id="Email" name="Recipient" type="text" style="width:150px"></td>
-  </tr>
-
-
- <tr>
-    <td>Theme</td>
-    <td><input id="Theme" name="Title" type="text" style="width:150px"></td>
-  </tr>
-
-
- <tr>
-    <td>Comments</td>
-	<td><textarea id="Comment" rows="4" cols="50" name="Message" style="width:150px;height:100px"></textarea></td>
-  </tr>
-
-	<tr>
-			<td>Social Media</td>
-			<td>
-				<div class="fb-send" data-href="http://hotel.travel.rakuten.co.jp/hinfo/?f_no=19756"></div>&nbsp;&nbsp;&nbsp;
-				<div class="fb-share-button" data-href="http://hotel.travel.rakuten.co.jp/hinfo/?f_no=19756" data-layout="button_count"></div><br/>
-			</td>
-	</tr>
-  
-</table>
 
 <input type="submit" name="invitefriends" value="Invite Your Friends!"> 
 
