@@ -11,6 +11,10 @@
 <script src='./lib/moment.min.js'></script>
 <script src='./lib/jquery.min.js'></script>
 <script src='./fullcalendar.min.js'></script>
+
+<script src="jquery.min.js"></script>
+<script src="jquery-simple-pagination-plugin.js"></script>
+
 <script>
 
 	$(document).ready(function() {
