@@ -1,3 +1,11 @@
+<?php
+$conn_string = "host=ec2-54-204-25-54.compute-1.amazonaws.com ";
+$conn_string .= "port=5432 dbname=d3j0nm9qghk5i6 user=etbyqbciasiion password= 2VoBZqhhBM1drFQtYCfltP434T";
+$dbconn = pg_connect($conn_string);
+$query = 'SELECT username, birthdate, national, "password" FROM public.user LIMIT 1;';
+$rs = pg_query($dbconn, $query) or die("Cannot execute query: $query\n");
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -164,12 +172,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 <td valign="top">
 <br><br>
 <?php
+$row = pg_fetch_row($rs);
 // define variables and set to empty values
-$name = "xiao wang";
-$email = "wang@gmail.com";
+$name = $row[0];
+$email = $row[0]."@rakuten.co.jp";
 $gender = "male";
-$nationality = "Japanese";
-$birthday = "1993-03-03";
+$nationality = $row[2];;
+$birthday = $row[1];
 
 ?>
 
