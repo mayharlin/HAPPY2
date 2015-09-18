@@ -13,7 +13,7 @@
     <div class="nav">
         <div class="container">
             <ul class= "pull-right">
-                  <li><a href="http://www.rakuten.co.jp">Sign Up</a></li>
+                  <li><a href="register.php">Sign Up</a></li>
                   <li><a href="login.php">Log In</a></li>
                   <li><a href="faq.php">FAQ</a></li> 
             </ul>
