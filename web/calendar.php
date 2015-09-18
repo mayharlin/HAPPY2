@@ -188,7 +188,7 @@ echo "<br><br>";
 ?>
 
 
-<form action="sendInv.php" method="post">
+<form action="invite.php" method="post">
 
 <h2>Invite your friends!</h2>
 

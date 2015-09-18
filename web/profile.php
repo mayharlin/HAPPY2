@@ -25,7 +25,7 @@ $rs = pg_query($dbconn, $query) or die("Cannot execute query: $query\n");
 <div class="information">
 <div class="container">
 
-<?php while ($row = pg_fetch_row($rs)): ?>
+<?php $row = pg_fetch_row($rs) ?>
 <table>
   <tr>
     <td>Name</td>
@@ -58,7 +58,6 @@ $rs = pg_query($dbconn, $query) or die("Cannot execute query: $query\n");
   </tr>-->
 
 </table>
-<?php endwhile; ?>
 
 </div>
 </div> 
