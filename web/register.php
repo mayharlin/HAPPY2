@@ -121,7 +121,7 @@ echo $row[0];
 										$rs2 = pg_query($dbconn, $query2) or die("Cannot execute query: $query\n");
 										while ($row2 = pg_fetch_row($rs2)) echo 'YOU GOT INVITED BY ' . $row2[0];
 									?>
-									&nbsp;&nbsp;&nbsp;&nbsp;Already a member ?
+									<br/>Already a member ?
 									<a href="#tologin" class="to_register"> Go and log in </a>
 								</p>
                             </form>
