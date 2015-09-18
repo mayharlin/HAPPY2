@@ -4,6 +4,7 @@
 <head>
 <title>Calendar</title>
 <link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" title="no title" charset="utf-8">
+<link rel="stylesheet" href="invite.css" media="screen" />
 
 <meta charset='utf-8' />
 <link href='./css/fullcalendar.css' rel='stylesheet' />
@@ -11,10 +12,6 @@
 <script src='./lib/moment.min.js'></script>
 <script src='./lib/jquery.min.js'></script>
 <script src='./fullcalendar.min.js'></script>
-
-<script src="jquery.min.js"></script>
-<script src="jquery-simple-pagination-plugin.js"></script>
-
 <script>
 
 	$(document).ready(function() {
@@ -29,7 +26,7 @@
 			selectable: true,
 			selectHelper: true,
 			select: function(start, end) {
-				var title = prompt('Event Title:');
+				var title = prompt('Event Title of Your Travel Plan:');
 				var eventData;
 				if (title) {
 					eventData = {
@@ -165,6 +162,80 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 ?>
 
 <table>
+<td valign="top">
+<br><br>
+<?php
+// define variables and set to empty values
+$name = "xiao wang";
+$email = "wang@gmail.com";
+$gender = "male";
+$nationality = "Japanese";
+$birthday = "1993-03-03";
+
+?>
+
+<?php
+echo "<h2>User Info:</h2>";
+echo $name;
+echo "<br><br>";
+echo $email;
+echo "<br><br>";
+echo $nationality;
+echo "<br><br>";
+echo $birthday;
+echo "<br><br>";
+echo $gender;
+echo "<br><br>";
+?>
+
+
+<form action="sendInv.php" method="post">
+
+<h2>Invite your friends!</h2>
+
+<div class="information">
+<div class="container">
+
+<form action="sendInv.php" method="post">
+<table>
+  <tr>
+    <td>Email Address</td>
+    <td><input id="Email" name="Recipient" type="text" style="width:150px"></td>
+  </tr>
+
+
+ <tr>
+    <td>Theme</td>
+    <td><input id="Theme" name="Title" type="text" style="width:150px"></td>
+  </tr>
+
+
+ <tr>
+    <td>Comments</td>
+	<td><textarea id="Comment" rows="4" cols="50" name="Message" style="width:150px;height:100px"></textarea></td>
+  </tr>
+
+	<tr>
+			<td>Social Media</td>
+			<td>
+				<div class="fb-send" data-href="http://hotel.travel.rakuten.co.jp/hinfo/?f_no=19756"></div>&nbsp;&nbsp;&nbsp;
+				<div class="fb-share-button" data-href="http://hotel.travel.rakuten.co.jp/hinfo/?f_no=19756" data-layout="button_count"></div><br/>
+			</td>
+	</tr>
+  
+</table>
+
+<input type="submit" name="invitefriends" value="Invite Your Friends!"> 
+
+
+</form>
+
+</td>
+
+
+<td>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</td>
 
 <td>
 <div id='calendar'></div>
