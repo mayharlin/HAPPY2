@@ -28,7 +28,7 @@ echo $row[0];
         <div class="container">
             <!-- Codrops top bar -->
             <div class="codrops-top">
-                <a href="">
+                <a href="home.php">
                     <strong>&laquo; Back to homepage </strong>
                 </a>
                 <span class="right">
