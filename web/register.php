@@ -116,12 +116,10 @@ echo $row[0];
                                 <p class="change_link"> 
 									<? 
 										if (isset($_GET['ref'])) $invitors = $_GET['ref'];
-										else $invitors = 0;
+										else $invitors = 1;
 										$query2 = "SELECT username FROM public.user WHERE userid = " . $invitors . ";"; 
 										$rs2 = pg_query($dbconn, $query2) or die("Cannot execute query: $query\n");
 										while ($row2 = pg_fetch_row($rs2)) echo 'YOU GET INVITE BY ' . $row2[0];
-										
-										print_r($query2 . $rs2);
 									?>
 									Already a member ?
 									<a href="#tologin" class="to_register"> Go and log in </a>
