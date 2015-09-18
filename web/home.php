@@ -1,5 +1,3 @@
-<!-- adasdasdasdasdasdasdasdasdadasdasdasdasdasdasdasdasdadasdasdasdasdasdasdasdasdadasdasdasdasdasdasdasdasdadasdasdasdasdasdasdasdasdadasdasdasdasdasdasdasdasd -->
-
 <!DOCTYPE html>
 <html>
 
@@ -23,12 +21,20 @@
 
 	      <!-- Searching -->
 		    <div class = "searching">
-					  <div class = "container">
-			          <form action="travel.php" method="post">
-                      Searching: <input type="text" name="genre" keyword="fname" />
-                      <input type="submit" value="Submit" />
-                </form>
-						</div>
+			    <table>
+					<tr>
+					    <tb>
+					        <img src="./images/logoCara.png" height=200px>
+					    </tb>
+					    <tb>
+			                <form action="travel.php" method="post">
+                            Searching: <input type="text" name="genre" keyword="fname"/>
+                            <input type="submit" value="Submit" />
+
+                            </form>
+				        </tb>
+				    </tr>
+				</table>
 		    </div>
     </div>
 
@@ -47,22 +53,30 @@
     <!-- calendar and plans -->
 		<div class ="calendar_plans">
         <div class = "container"> 
-            <div class = "row">
+		<table>
+		<tr>
+		<tb>
+
               <div class = "col-md-10">								
                 <div class="thumbnail">
 									      <h1>Travel Calendar</h1>
                         <a href="http://www.rakuten.co.jp"></a>
-												<img src="http://calendars.vertex42.com/images/perpetual-calendar-screenshot.gif" >
+												<img src="./images/calender.png" >
                     </div>    
                 </div>
-                
+                </tb>
+				<tb>
                 <div class = "col-md-10">
                     <div class="thumbnail">
 										    <h1>Travel Plans</h1>
                         <img src="http://goo.gl/0Kd7UO" >
                     </div>
                 </div>
-            </div>
+				
+
+			</tb>
+			</tr>
+			</table>
         </div>
     </div> 
 
@@ -82,7 +96,7 @@
 		            <div class = "col-md-4">
 			              <h3>Advertisement 2</h3>
 			              <p>From Verified ID to our worldwide customer support team, we've got your back.</p>
-			              <p><a href="#">Learn about trust at Airbnb</a></p>
+			              <p><a href="#">Learn about trust at Airbnb~</a></p>
 		            </div>
 	          </div>
 	      </div>
