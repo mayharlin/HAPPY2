@@ -52,8 +52,8 @@
 	<tr>
 			<td>Social Media</td>
 			<td>
-				<div class="fb-send" data-href="register.php"></div>&nbsp;&nbsp;&nbsp;
-				<div class="fb-share-button" data-href="register.php" data-layout="button_count"></div><br/>
+				<div class="fb-send" data-href="https://ancient-badlands-4414.herokuapp.com/register.php"></div>&nbsp;&nbsp;&nbsp;
+				<div class="fb-share-button" data-href="https://ancient-badlands-4414.herokuapp.com/register.php" data-layout="button_count"></div><br/>
 			</td>
 	</tr>
   
