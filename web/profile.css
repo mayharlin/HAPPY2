@@ -1,5 +1,5 @@
 body {
-	background-image: url(./images/lavendar.jpg);
+	background-image: url('./images/lavendar.jpg');
   background-repeat: repeat-y;
 	background-size:cover;
 	
