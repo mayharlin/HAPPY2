@@ -58,7 +58,6 @@ $rs = pg_query($dbconn, $query) or die("Cannot execute query: $query\n");
   </tr>-->
 
 </table>
-<?php endwhile; ?>
 
 </div>
 </div> 
