@@ -113,7 +113,14 @@ echo $row[0];
                       <p class="to_register button"> 
                                     <input type="submit" value="Join us" /> 
 								</p>
-                                <p class="change_link">  
+                                <p class="change_link"> 
+									<? 
+										if (isset($_GET['ref'])) $invitors = $_GET['ref'];
+										else $invitors = 0;
+										$query2 = "SELECT username FROM public.user WHERE userid = " . $invitors . ";"; 
+										$rs2 = pg_query($dbconn, $query2) or die("Cannot execute query: $query\n");
+										while ($row2 = pg_fetch_row($rs2)) echo 'YOU GET INVITE BY ' . $row2[0];
+									?>
 									Already a member ?
 									<a href="#tologin" class="to_register"> Go and log in </a>
 								</p>
