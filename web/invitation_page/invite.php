@@ -52,8 +52,8 @@
 	<tr>
 			<td>Social Media</td>
 			<td>
-				<div class="fb-send" data-href="http://hotel.travel.rakuten.co.jp/hinfo/?f_no=19756"></div>&nbsp;&nbsp;&nbsp;
-				<div class="fb-share-button" data-href="http://hotel.travel.rakuten.co.jp/hinfo/?f_no=19756" data-layout="button_count"></div><br/>
+				<div class="fb-send" data-href="register.php"></div>&nbsp;&nbsp;&nbsp;
+				<div class="fb-share-button" data-href="register.php" data-layout="button_count"></div><br/>
 			</td>
 	</tr>
   
