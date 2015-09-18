@@ -22,8 +22,8 @@
 	      <!-- Searching -->
 		    <div class = "searching">
 					  <div class = "container">
-			          <form action="form_action.asp" method="get">
-                      Searching: <input type="text" keyword="fname" />
+			          <form action="travel.php" method="post">
+                      Searching: <input type="text" name="genre" keyword="fname" />
                       <input type="submit" value="Submit" />
                 </form>
 						</div>
