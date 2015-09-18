@@ -49,18 +49,7 @@
 	<td><textarea id="Comment" rows="4" cols="50" name="Message" style="width:300px;height:100px"></textarea></td>
   </tr>
 
-	<tr>
-			<td>Social Media</td>
-			<td>
-				<div class="fb-send" data-href="https://ancient-badlands-4414.herokuapp.com/register.php"></div>&nbsp;&nbsp;&nbsp;
-				<div class="fb-share-button" data-href="https://ancient-badlands-4414.herokuapp.com/register.php" data-layout="button_count"></div><br/>
-			</td>
-	</tr>
-  
 </table>
-
-
-
 
 <label for='Plans'>Plans</label>
 <select id='Plans' name='Plan'>
@@ -88,16 +77,23 @@
 </div>
 </div> 
 
-
-
 <p>
 <button type='submit'>send</button>
 </p>
 
-<p>
-<button type='submit'>Back to Homepage</button>
-</p>
-</form>
+
+  
+<table> 
+	<tr>
+			<td>Social Media</td>
+			<td>
+				<div class="fb-send" data-href="https://ancient-badlands-4414.herokuapp.com/register.php"></div>&nbsp;&nbsp;&nbsp;
+				<div class="fb-share-button" data-href="https://ancient-badlands-4414.herokuapp.com/register.php" data-layout="button_count"></div><br/>
+			</td>
+	</tr>
+  
+</table>
+
 
 <div id="fb-root"></div>
 
