@@ -119,9 +119,9 @@ echo $row[0];
 										else $invitors = 1;
 										$query2 = "SELECT username FROM public.user WHERE userid = " . $invitors . ";"; 
 										$rs2 = pg_query($dbconn, $query2) or die("Cannot execute query: $query\n");
-										while ($row2 = pg_fetch_row($rs2)) echo 'YOU GET INVITE BY ' . $row2[0];
+										while ($row2 = pg_fetch_row($rs2)) echo 'YOU GOT INVITED BY ' . $row2[0];
 									?>
-									Already a member ?
+									&nbsp;&nbsp;&nbsp;&nbsp;Already a member ?
 									<a href="#tologin" class="to_register"> Go and log in </a>
 								</p>
                             </form>
